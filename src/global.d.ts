@@ -1,7 +1,7 @@
-import { CSSObject } from "@emotion/css";
+// import { CSSObject } from "@emotion/css";
 
-declare module "react" {
-  interface CSSProperties extends CSSObject {}
-}
+// declare module "react" {
+//   interface CSSProperties extends CSSObject {}
+// }
 
-export {};
+// export {};

@@ -1,6 +1,6 @@
-import { CSSProperties } from "react";
-import { SvgPenTool } from "../icons/PenTool";
 import React from "react";
+import type { CSSProperties } from "react";
+import { SvgPenTool } from "../icons/PenTool";
 
 type ThemeIconProps = {
     themeName: string;
@@ -8,11 +8,10 @@ type ThemeIconProps = {
     style?: CSSProperties;
 };
 
-export function ThemeIcon({ themeName, darkMode, style } : ThemeIconProps) {
+export const ThemeIcon: React.FC<ThemeIconProps> = ({ themeName, darkMode, style }) => {
     switch(themeName) {
         case 'dracula':
             return <SvgPenTool style={style} />
     }
-
-    return <div></div>;
-}
+    return <div style={style}></div>;
+};
