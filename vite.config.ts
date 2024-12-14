@@ -4,7 +4,6 @@ import { fileURLToPath } from "url";
 
 export default defineConfig({
   build: {
-    minify: false,
     lib: {
       entry: path.resolve(
         path.dirname(fileURLToPath(import.meta.url)),
