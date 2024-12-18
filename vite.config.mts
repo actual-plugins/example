@@ -13,7 +13,7 @@ export default defineConfig({
         "src/index.tsx"
       ),
       name: "Shared",
-      formats: ["es", "cjs"],
+      formats: ["es"],
       fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
