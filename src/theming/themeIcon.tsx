@@ -3,19 +3,18 @@ import { GenerateSvgPenTool } from "../icons/PenTool";
 
 type ThemeIconProps = {
     themeName: string;
-    darkMode: boolean;
     style?: CSSProperties;
 };
 
 export const GenerateThemeIcon = (React) => {
     const SvgPenTool = GenerateSvgPenTool(React);
     
-    const ThemeIcon: React.FC<ThemeIconProps> = ({ themeName, darkMode, style }) => {
+    const ThemeIcon: React.FC<ThemeIconProps> = ({ themeName, style }) => {
         switch(themeName) {
-            case 'dracula':
+            case 'Dracula':
                 return <SvgPenTool style={style} />
         }
-        return <div style={style}></div>;
+        return <div style={style}>{themeName}</div>;
     };
 
     return ThemeIcon;
