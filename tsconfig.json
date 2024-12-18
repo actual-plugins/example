@@ -6,7 +6,8 @@
     "declaration": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "moduleResolution": "nodenext"
+    "moduleResolution": "nodenext",
+    "types": ["node"]
   },
   "include": ["src", "src/global.d.ts"],
   "exclude": ["node_modules", "dist"]

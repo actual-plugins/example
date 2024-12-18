@@ -7,28 +7,34 @@ import { tokyoNightTheme } from './theming/tokyoNight';
 
 const pluginEntry: ActualPluginEntry = (React) => {
     const ThemeIcon = GenerateThemeIcon(React);
-    
+
     const plugin: ActualPlugin = {
         name: 'Example',
         version: '0.0.1',
-        availableThemes: (darkMode) => darkMode ? ['Dracula'] : ['Sepia', 'Rose Pine', 'Tokyo Night'],
+        availableThemes: () => ['Dracula', 'Sepia', 'Rose Pine', 'Tokyo Night'],
         getThemeIcon: (themeName, darkMode, properties) => <ThemeIcon themeName={themeName} darkMode={darkMode} style={properties} />,
         getThemeSchema: themeSchema,
     }
 
-    function themeSchema(themeName: string, darkMode: boolean) {
-        if(themeName === 'Dracula') {
-            return draculaTheme;
-        } else if (themeName === 'Rose Pine') {
-            return rosePineTheme;
-        } else if (themeName === 'Tokyo Night') {
-            return tokyoNightTheme;
-        } else {
-            return sepiaTheme;
+    function themeSchema(themeName: string) {
+        switch (themeName) {
+            case 'Dracula':
+                return draculaTheme;
+
+            case 'Rose Pine':
+                return rosePineTheme;
+
+            case 'Tokyo Night':
+                return tokyoNightTheme;
+
+            case 'Sepia':
+                return sepiaTheme;
         }
+
+        return {};
     }
-    
-    
+
+
     return plugin;
 }
 export default pluginEntry;
