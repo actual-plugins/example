@@ -10,7 +10,7 @@ const pluginEntry: ActualPluginEntry = (React) => {
 
     const plugin: ActualPlugin = {
         name: 'Example',
-        version: '0.0.1',
+        version: '0.0.2',
         availableThemes: () => ['Dracula', 'Sepia', 'Rose Pine', 'Tokyo Night'],
         getThemeIcon: (themeName, properties) => <ThemeIcon themeName={themeName} style={properties} />,
         getThemeSchema: themeSchema,
