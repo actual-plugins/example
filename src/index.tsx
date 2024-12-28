@@ -4,13 +4,14 @@ import { draculaTheme } from './theming/dracula';
 import { sepiaTheme } from './theming/sepia';
 import { rosePineTheme } from './theming/rosepine';
 import { tokyoNightTheme } from './theming/tokyoNight';
+import manifest from './manifest';
 
 const pluginEntry: ActualPluginEntry = (React) => {
     const ThemeIcon = GenerateThemeIcon(React);
 
     const plugin: ActualPlugin = {
-        name: 'Example',
-        version: '0.0.2',
+        name: manifest.name,
+        version: manifest.version,
         availableThemes: () => ['Dracula', 'Sepia', 'Rose Pine', 'Tokyo Night'],
         getThemeIcon: (themeName, properties) => <ThemeIcon themeName={themeName} style={properties} />,
         getThemeSchema: themeSchema,

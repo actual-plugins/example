@@ -54,7 +54,7 @@ export default defineConfig({
       name: "vite-plugin-zip-dist",
       closeBundle() {
         const distPath = path.resolve(__dirname, "dist");
-        const zipName = `payload-${manifest.slug}-${manifest.version}.zip`;
+        const zipName = `payload-${manifest.name}-${manifest.version}.zip`;
         const outputPath = path.resolve(__dirname, "dist", zipName);
         const output = createWriteStream(outputPath);
         const archive = archiver("zip", { zlib: { level: 9 } });

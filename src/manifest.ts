@@ -1,9 +1,9 @@
 import { ActualPluginManifest } from 'plugins-shared';
 
 const manifest: ActualPluginManifest = {
-  slug: "example-plugin",
+  url: "https://github.com/actual-plugins/example/",
   name: "Example Plugin",
-  version: "1.0.0",
+  version: "0.0.2",
   description: "This is an example plugin.",
   pluginType: 'client',
   minimumActualVersion: 'v24.12.0'
